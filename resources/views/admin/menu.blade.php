@@ -89,13 +89,13 @@
                                     @foreach (\Grassstation\Models\Product::query()->orderBy("internal_sku")->get() as $product)
                                     <tr class="table-{{$product->stockStatusClass()}}" id="prdx-{{$product->id}}">
                                         <td><a href="{{route("products.edit",$product->id)}}">{{$product->internal_sku}}</td>
-                                        <td>{{$product->name}} {!! $product->dispKind(true) !!}</td>
+                                        <td>{{$product->name}} {!! $product->dispKind(true) !!} {!! $product->feature_flag ? '<span>⭐</span>' : "" !!}</td>
                                         <td class="text-right">{{$product->price_per_gram}}</td>
                                         <td class="commands">
                                             <div class="btn-group">
                                             <a class="btn btn-sm disabled" href="#" role="button" title="รูปภาพสินค้า"><img src="{{asset("img/win95/icons/imagjpeg-0.png")}}" alt="" class="icon-16"> {{$product->imagesCount()}}</a>
 {{-- Feature Flag --}}
-<a href="#prdx-{{$product->id}}" class="btn btn-link">{!! $product->feature_flag ? '<span>⭐</span>' : '' !!}</a>                                            
+<a href="#prdx-{{$product->id}}" class="btn btn-link">{!! $product->feature_flag ? '<span class="text-warning">★</span>' : '<span class="text-muted">☆</span>' !!}</a>                                            
 {{-- Stock Status --}}
 <form action="{{ route('products.toggle-stock', $product) }}" method="POST">
     @csrf
