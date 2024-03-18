@@ -161,6 +161,13 @@
                                         <meta itemprop="eligibleTransactionVolume" content="500.00"> <!-- Orders over 500 THB -->
                                     </div>  --}}
                                 </div>
+                            @auth
+                            <form action="{{ route('products.toggle-stock', $product) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <button type="submit">ปรับสถานะสินค้า</button>
+                            </form>
+                            @endauth
                             @if ($product->status === 'in stock')
                                 สถานะ: <b class="text-success" itemprop="availability" content="https://schema.org/InStock">มีสินค้า</b><br>
                                 {{$product->displayPrice()}}

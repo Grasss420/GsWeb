@@ -175,6 +175,18 @@ class Product extends Model implements Sitemapable
         }
         return $pa;
     }
+    public function toggleStockStatus() {
+        switch ($this->status) {
+            case 'in stock':
+                $this->status = 'out of stock';
+                break;
+            case 'out of stock':
+                $this->status = 'in stock';
+                break;
+        }
+        $this->save();
+    }
+    
 
     public static function getU1()
     {

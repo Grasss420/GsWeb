@@ -70,7 +70,11 @@ class ProductController extends Controller
         if(!$product) abort(404);
         return view('products.show',["product"=>$product]);
     }
-
+    public function toggleStock(Product $product) {
+        $product->toggleStockStatus();
+        return back()->with('success', 'Stock status updated successfully.');
+    }
+    
     /**
      * Show the form for editing the specified resource.
      *

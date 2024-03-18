@@ -44,6 +44,8 @@ Route::get("map",function () {
 
 Route::get("products/json",[Controllers\ProductController::class, 'json'])->name('products.json');
 Route::post("products/json",[Controllers\ProductController::class, 'jsonX'])->name('products.jsonX');
+Route::put('/products/{product}/toggle-stock', [Controllers\ProductController::class, 'toggleStock'])->name('products.toggle-stock');
+
 Route::resource('products',Controllers\ProductController::class);
 Route::post("products/{product}/pic",[Controllers\ProductController::class, 'picUpdate'])->name('products.picup')->middleware('auth');
 Route::resource('article',Controllers\ArticleController::class);

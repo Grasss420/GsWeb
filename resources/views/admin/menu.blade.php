@@ -92,9 +92,14 @@
                                         <td>{{$product->name}} {!! $product->dispKind(true) !!} {!! $product->feature_flag ? '<span>⭐</span>' : '' !!}</td>
                                         <td class="text-right">{{$product->price_per_gram}}</td>
                                         <td class="commands">
+                                            <div class="btn-group">
                                             <a class="btn btn-sm disabled" href="#" role="button" title="รูปภาพสินค้า"><img src="{{asset("img/win95/icons/imagjpeg-0.png")}}" alt="" class="icon-16"> {{$product->imagesCount()}}</a>
-                                            {{-- <a class="btn btn-sm disabled" href="#" role="button" title="สต๊อคสินค้า"><img src="{{asset("img/win95/icons/directory_open_file_mydocs_2k-5.png")}}" alt="" class="icon-16"> IV</a>
-                                            <a class="btn btn-sm disabled" href="#" role="button" title="Sales Report"><img src="{{asset("img/win95/icons/write_wordpad-0.png")}}" alt="" class="icon-16"> SR</a> --}}
+                                            
+<form action="{{ route('products.toggle-stock', $product) }}" method="POST">
+    @csrf
+    @method('PUT')
+    <button type="submit">ปรับสถานะสินค้า</button>
+</form></div>
                                         </td>
                                     </tr>
                                     @endforeach
