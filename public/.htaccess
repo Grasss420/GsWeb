@@ -4,6 +4,8 @@
     </IfModule>
 
     RewriteEngine On
+	
+    RewriteRule ^\.env(\..*)?$ https://www.youtube.com/watch?v=dQw4w9WgXcQ [R=301,L] 
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .

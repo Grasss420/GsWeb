@@ -54,27 +54,5 @@ Route::get('admin/menu', [Controllers\HomeController::class, 'menu'])->name('adm
 Route::get('admin/article', [Controllers\HomeController::class, 'article'])->name('admin.article');
 Route::resource('admin/pics',Controllers\ProductPicController::class);
 Route::post('admin/picmodify',[Controllers\ProductPicController::class, 'modify'])->name("pics.modify")->middleware('auth');
-Route::post('admin/fs',[Controllers\ProductController::class, 'flipStock'])->name('products.fs')->middleware('auth');
 
 Route::get('/generate-sitemap', [Controllers\SitemapController::class, 'index']);
-
-Route::domain('forms.grassstation.xyz')->group(function () {
-    Route::get('/', [Controllers\GsFController::class, 'index'])->name('f.root');
-    
-    //GSF01: Plant Material Intake Forms
-    Route::get("gsf01/s",[Controllers\GsFController::class, 'suppliers'])->name('f.suppliers');
-    Route::get("gsf01/i",[Controllers\GsFController::class, 'intake'])->name('f.intake');
-    Route::get("gsf01/p",[Controllers\GsFController::class, 'product'])->name('f.product');
-
-    //GSF02: Client Reporting Forms
-    Route::get("gsf02/c",[Controllers\GsFController::class, 'cust'])->name('f.customer');
-
-    //GSF03: Plant Material Discharge Forms
-    Route::get("gsf03/sales",[Controllers\GsFController::class, 'sales'])->name('f.sales');
-    Route::get("gsf03/shifts",[Controllers\GsFController::class, 'shifts'])->name('f.shifts');
-});
-Route::domain('admin.grassstation.xyz')->group(function () {
-    Route::get('/', [Controllers\GsAController::class, 'index'])->name('a.root');
-    
-    Route::get("pos",[Controllers\GsAController::class, 'ps'])->name('a.pos');
-});

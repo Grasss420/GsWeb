@@ -119,20 +119,9 @@
                   <img src="img/gsqr.png" class="img-fluid qr-block" alt="">
                 </div>
               </div>
-            </div> 
-        </div> {{-- end row --}}
-
-        <div class="row">
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Government Warning Disclaimer</h4>
-                <p class="card-text">เว็บไซต์นี้จัดทำเพื่อให้ข้อมูลกัญชาเพื่อการศึกษาเท่านั้น มิได้มีจุดประสงค์เพื่อจำหน่ายสินค้าผ่านระบบออนไลน์หรือส่งเสริมการขายกัญชาทั้งสิ้น ผู้ที่ซื้อกัญชาในประเทศไทยต้องมีอายุตั้งแต่ 20 ปีขึ้นไปและไม่ได้ตั้งครรภ์อยู่</p>
-              </div>
             </div>
-          </div>
         </div>
-    </div>{{-- end container-fluid --}}
+    </div>
   
   
   </main>

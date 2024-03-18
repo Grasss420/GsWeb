@@ -92,10 +92,9 @@
                                         <td>{{$product->name}} {!! $product->dispKind(true) !!} {!! $product->feature_flag ? '<span>⭐</span>' : '' !!}</td>
                                         <td class="text-right">{{$product->price_per_gram}}</td>
                                         <td class="commands">
-                                            <a class="btn btn-sm disabled" href="#" role="button" title="รูปภาพสินค้า"><img src="{{asset("img/win95/icons/imagjpeg-0.png")}}" alt="number of images" class="icon-16"> {{$product->imagesCount()}}</a>
-                                             <a class="btn btn-sm" href="javasctipt:flipStock({{$product->id}})" role="button" title="ปรับสถานะสต๊อคสินค้า"><img src="{{asset("img/win95/icons/directory_open_file_mydocs_2k-5.png")}}" alt="" class="icon-16"> IV</a>
-                                            {{--
-                                            <a class="btn btn-sm" href="javascript:salesRpt({{$product->id}});" role="button" title="Sales Report"><img src="{{asset("img/win95/icons/write_wordpad-0.png")}}" alt="" class="icon-16"> SR</a> --}}
+                                            <a class="btn btn-sm disabled" href="#" role="button" title="รูปภาพสินค้า"><img src="{{asset("img/win95/icons/imagjpeg-0.png")}}" alt="" class="icon-16"> {{$product->imagesCount()}}</a>
+                                            {{-- <a class="btn btn-sm disabled" href="#" role="button" title="สต๊อคสินค้า"><img src="{{asset("img/win95/icons/directory_open_file_mydocs_2k-5.png")}}" alt="" class="icon-16"> IV</a>
+                                            <a class="btn btn-sm disabled" href="#" role="button" title="Sales Report"><img src="{{asset("img/win95/icons/write_wordpad-0.png")}}" alt="" class="icon-16"> SR</a> --}}
                                         </td>
                                     </tr>
                                     @endforeach
@@ -112,7 +111,6 @@
 @section('xtrajs')
     <script>
         const msource = "{{route("products.json")}}";
-        const fs = "{{route("products.fs")}}";
     </script>
     <script src="{{asset("js/adminmenu.js")}}"></script>
 @endsection

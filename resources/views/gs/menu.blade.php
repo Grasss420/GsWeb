@@ -74,12 +74,13 @@
                     </div>
                     <div class="card-body" id="menu-main">
 @php
-    $targetDate = \Carbon\Carbon::create(2024, 2, 28); // Set your target date
+    $targetDate = \Carbon\Carbon::create(2024, 3, 15); // Set your target date
 @endphp
 
                         <h1 class="" style="font-size: 24pt">
 @if(\Carbon\Carbon::now()->lte($targetDate))
-<marquee>🔥🔥!!Promotion!!🔥🔥 ⭐️ซื้อครบ 200 บาทแถมเยลลี่ 1 ชิ้นทันที่⭐️</marquee>
+<marquee>🔥🔥!!Promotion รับต้นเดือน!!🔥🔥
+⭐️ซื้อ 2 แถม 1 ทุกรายการ🥴⭐️</marquee>
 @else เมนู Grassstation @endif
                         </h1>
                         <form class="form-inline justify-content-between" method="POST" action="#" id="frmSearch">
