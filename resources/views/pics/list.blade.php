@@ -33,7 +33,7 @@
     {{--    $table->bigIncrements('id');
             $table->text('url');
             $table->text('description')->nullable(); --}}
-                                    @foreach (\Grassstation\Models\ProductPic::orderByDesc("id")->get() as $pp)
+                                    @foreach ($pics as $pp)
                                     <tr>
                                         <td class="picview-preview" style="background-image:url('{{url($pp->getURL())}}')">{{$pp->id}}</td>
                                         <td><a href="{{$pp->getURL()}}" target="_blank">{{$pp->url}}</a></td>
@@ -44,6 +44,11 @@
                                     </tr>
                                     @endforeach
                                 </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="text-center" colspan="100%">{{$pics->links()}}</td>
+                                    </tr>
+                                </tfoot>
                             </table></div>
                         </div>
                     </div>

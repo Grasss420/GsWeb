@@ -19,7 +19,8 @@ class ProductPicController extends Controller
      */
     public function index()
     {
-        return view('pics.list');
+        $pics = ProductPic::orderByDesc("id");
+        return view('pics.list',['pics'=>$pics->simplePaginate('30')]);
     }
 
     /**

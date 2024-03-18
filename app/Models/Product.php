@@ -150,6 +150,16 @@ class Product extends Model implements Sitemapable
         }
     }
 
+    public function stockStatus($short = false){
+        switch(true){
+            case $this->status == "in stock":
+                return 'มีสินค้า';
+            case $this->status == "out of stock":
+                return "สินค้าหมด";
+            case $this->status == "hidden":
+                return "ซ่อน";
+        }
+    }
     public function stockStatusClass(){
         switch(true){
             case $this->status == "in stock":
