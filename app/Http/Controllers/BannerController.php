@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Grassstation\Http\Controllers;
 
-use App\Models\Banner;
+use Grassstation\Models\Banner;
 use Illuminate\Http\Request;
 
 class BannerController extends Controller
@@ -41,7 +41,7 @@ class BannerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Banner  $banner
+     * @param  \Grassstation\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
     public function show(Banner $banner)
@@ -52,7 +52,7 @@ class BannerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Banner  $banner
+     * @param  \Grassstation\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
     public function edit(Banner $banner)
@@ -64,7 +64,7 @@ class BannerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Banner  $banner
+     * @param  \Grassstation\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Banner $banner)
@@ -75,7 +75,7 @@ class BannerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Banner  $banner
+     * @param  \Grassstation\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
     public function destroy(Banner $banner)

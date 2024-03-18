@@ -86,7 +86,7 @@
                                 </thead>
                                 {{-- todo:make it more display enduser friendly --}}
                                 <tbody>
-                                    @foreach (\App\Models\Product::query()->orderBy("internal_sku")->get() as $product)
+                                    @foreach (\Grassstation\Models\Product::query()->orderBy("internal_sku")->get() as $product)
                                     <tr class="table-{{$product->stockStatusClass()}}">
                                         <td><a href="{{route("products.edit",$product->id)}}">{{$product->internal_sku}}</td>
                                         <td>{{$product->name}} {!! $product->dispKind(true) !!} {!! $product->feature_flag ? '<span>⭐</span>' : '' !!}</td>

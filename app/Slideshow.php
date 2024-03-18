@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace Grassstation;
 use Illuminate\Support\Facades\Storage;
 
 Class Slideshow{

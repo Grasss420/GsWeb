@@ -156,7 +156,7 @@
                             @endphp
                             @foreach ($editing->product_images as $imgid) @php
                                 
-                                    $pic = \App\Models\ProductPic::find($imgid);
+                                    $pic = \Grassstation\Models\ProductPic::find($imgid);
                                     if(!$pic){
                                         continue;
                                     }
@@ -193,7 +193,7 @@
             </div>
             <div class="modal-body">
                 @php
-                    $images = \App\Models\ProductPic::qdfs()->get();
+                    $images = \Grassstation\Models\ProductPic::qdfs()->get();
                     $posto = route("products.picup",$editing->id);
                 @endphp
                 @include('components.picview')

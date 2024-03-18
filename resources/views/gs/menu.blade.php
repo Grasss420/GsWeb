@@ -159,7 +159,7 @@
                             <div class="tab-pane fade show active" id="featured" role="tabpanel" aria-labelledby="u1-tab">
                                 @php
                             //get featured menu
-                            $fp = \App\Models\Product::Featured()->OrderByDesc("price_per_gram")->OrderBy("internal_sku")->get();
+                            $fp = \Grassstation\Models\Product::Featured()->OrderByDesc("price_per_gram")->OrderBy("internal_sku")->get();
                         @endphp
                         @if($fp->count() === 0)
                             <p class="text-center">ยังไม่มีสินค้าแนะนำในขณะนี้ สามารถเลือกชมสินค้าได้จากเมนูด้านข้าง</p>
@@ -187,7 +187,7 @@
                             <div class="tab-pane fade" id="under100" role="tabpanel" aria-labelledby="u2-tab">
                                 <p class="lead text-center">สินค้าราคาไม่เกิน 100฿ ต่อกรัม</p>
                                 @php
-                                    $p1 = \App\Models\Product::getU1();
+                                    $p1 = \Grassstation\Models\Product::getU1();
                                 @endphp
                                 <div class="row">
                                 @foreach ($p1 as $product)
@@ -210,7 +210,7 @@
                             </div>
                             <div class="tab-pane fade" id="under200" role="tabpanel" aria-labelledby="u1-tab">
                                 <p class="lead text-center">สินค้าราคาไม่เกิน 200฿ ต่อกรัม</p>@php
-                                $p1 = \App\Models\Product::getU2();
+                                $p1 = \Grassstation\Models\Product::getU2();
                             @endphp
                             <div class="row">
                             @foreach ($p1 as $product)

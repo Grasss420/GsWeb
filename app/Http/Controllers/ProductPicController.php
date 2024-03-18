@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Grassstation\Http\Controllers;
 
-use App\Models\ProductPic;
+use Grassstation\Models\ProductPic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -59,7 +59,7 @@ class ProductPicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ProductPic  $productPic
+     * @param  \Grassstation\Models\ProductPic  $productPic
      * @return \Illuminate\Http\Response
      */
     public function show(ProductPic $productPic)
@@ -70,7 +70,7 @@ class ProductPicController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ProductPic  $productPic
+     * @param  \Grassstation\Models\ProductPic  $productPic
      * @return \Illuminate\Http\Response
      */
     public function edit($ppid)
@@ -89,7 +89,7 @@ class ProductPicController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ProductPic  $productPic
+     * @param  \Grassstation\Models\ProductPic  $productPic
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, ProductPic $productPic)
@@ -110,7 +110,7 @@ class ProductPicController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ProductPic  $productPic
+     * @param  \Grassstation\Models\ProductPic  $productPic
      * @return \Illuminate\Http\Response
      */
     public function destroy($ppid)

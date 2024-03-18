@@ -62,7 +62,7 @@
                                     @endphp
                                         @foreach ($product->product_images as $i => $imgid)
                                         @php
-                                            $pic = \App\Models\ProductPic::find($imgid);
+                                            $pic = \Grassstation\Models\ProductPic::find($imgid);
                                             if(!$pic){
                                                 continue;
                                             }

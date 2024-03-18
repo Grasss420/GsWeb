@@ -33,7 +33,7 @@
     {{--    $table->bigIncrements('id');
             $table->text('url');
             $table->text('description')->nullable(); --}}
-                                    @foreach (\App\Models\ProductPic::orderByDesc("id")->get() as $pp)
+                                    @foreach (\Grassstation\Models\ProductPic::orderByDesc("id")->get() as $pp)
                                     <tr>
                                         <td class="picview-preview" style="background-image:url('{{url($pp->getURL())}}')">{{$pp->id}}</td>
                                         <td><a href="{{$pp->getURL()}}" target="_blank">{{$pp->url}}</a></td>

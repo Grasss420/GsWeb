@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Grassstation\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class GsMLoginController extends \App\Http\Controllers\Auth\LoginController
+class GsMLoginController extends \Grassstation\Http\Controllers\Auth\LoginController
 {
     protected $realm = "member";
 }

@@ -41,7 +41,7 @@
                             <h3>สินค้าแนะนำล่าสุด</h3>
                             <div class="carousel-inner" role="listbox">
                                 @php
-                                    $pd = \App\Models\Product::qHomeP();
+                                    $pd = \Grassstation\Models\Product::qHomeP();
                                     $i = true;
                                 @endphp
                                 @foreach ($pd as $product)

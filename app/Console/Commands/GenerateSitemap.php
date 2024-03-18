@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Grassstation\Console\Commands;
 
-use App\Models\Product;
+use Grassstation\Models\Product;
 use Illuminate\Console\Command;
 use Spatie\Sitemap\SitemapGenerator;
 use Spatie\Sitemap\Tags\Url;

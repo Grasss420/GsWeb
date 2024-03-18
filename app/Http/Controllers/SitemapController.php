@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Grassstation\Http\Controllers;
 
-use App\Models\Product;
+use Grassstation\Models\Product;
 use Carbon\Carbon;
 use Spatie\Sitemap\Tags\Url;
 use Illuminate\Http\Request;
