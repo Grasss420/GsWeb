@@ -51,9 +51,9 @@ Route::post("products/{product}/pic",[Controllers\ProductController::class, 'pic
 Route::resource('article',Controllers\ArticleController::class);
 //Auth::routes(['register' => false,'reset' => false,'verify' => false]);
 // Authentication Routes...
-Route::get('login', 'Grassstation\Http\Controllers\Auth\LoginController@showLoginForm');
+Route::get('login', 'Grassstation\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Grassstation\Http\Controllers\Auth\LoginController@login');
-Route::get('logout', 'Grassstation\Http\Controllers\Auth\LoginController@logout');
+Route::get('logout', 'Grassstation\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
 //Route::get('register', 'App\Http\Controllers\Auth\RegisterController@showRegistrationForm');
