@@ -1,0 +1,124 @@
+.container {
+    max-width: 960px;
+  }
+  
+  /*
+   * Custom translucent site header
+   */
+  
+  .site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  .site-header a {
+    color: #8e8e8e;
+    transition: color .15s ease-in-out;
+  }
+  .site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /*
+   * Dummy devices (replace them with your own or something else entirely!)
+   */
+  
+  .product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
+  }
+  
+  .product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+  }
+  
+  .product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+  }
+  
+  
+  /*
+   * Extra utilities
+   */
+  
+  .flex-equal > * {
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      flex: 1;
+    }
+  }
+.bg-trans{
+    background: transparent;
+}
+.ndark{
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.ndark .tab-pane{
+    background: #000;
+}
+
+#gs-footer{
+    background: rgb(80,124,88);
+    background: linear-gradient(90deg, rgba(80,124,88,1) 19%, rgba(80,124,88,0.742810503107493) 35%, rgba(80,124,88,0) 100%); 
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    height: 2rem;
+    color:whitesmoke;
+}
+#gs-footer .gs-logo img{
+    height: 32px;
+}
+#gs-footer .gstex{
+    padding-top: 3px;
+    font-weight: 300;
+}
+
+/*.carousel-inner > .carousel-item > img {
+  min-width: 100%;
+  width: 100%;
+  max-height: 768px;
+}*/
+body{
+  overflow: hidden;
+  max-height: 100vh;
+}
+.card-body{
+  color:#333;
+}
+
+.fg .card{
+  min-height: 125px;
+  position: relative;
+}
+.fg .card .card-img-top{
+  min-height: 100px;
+  background-size: cover;
+}
+.fg .card .card-body{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
