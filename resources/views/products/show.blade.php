@@ -165,7 +165,7 @@
                             <form action="{{ route('products.toggle-stock', $product) }}" method="POST">
                                 @csrf
                                 @method('PUT')
-                                <button type="submit">ปรับสถานะสินค้า</button>
+                                <button type="submit" class="btn btn-{{$product->stockStatusClass()}}">ปรับสถานะสินค้า</button>
                             </form>
                             @endauth
                             @if ($product->status === 'in stock')

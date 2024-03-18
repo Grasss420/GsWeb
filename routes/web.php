@@ -49,7 +49,20 @@ Route::put('/products/{product}/toggle-stock', [Controllers\ProductController::c
 Route::resource('products',Controllers\ProductController::class);
 Route::post("products/{product}/pic",[Controllers\ProductController::class, 'picUpdate'])->name('products.picup')->middleware('auth');
 Route::resource('article',Controllers\ArticleController::class);
-Auth::routes(['register' => false,'reset' => false,'verify' => false]);
+//Auth::routes(['register' => false,'reset' => false,'verify' => false]);
+// Authentication Routes...
+Route::get('login', 'Grassstation\Http\Controllers\Auth\LoginController@showLoginForm');
+Route::post('login', 'Grassstation\Http\Controllers\Auth\LoginController@login');
+Route::get('logout', 'Grassstation\Http\Controllers\Auth\LoginController@logout');
+
+// Registration Routes...
+//Route::get('register', 'App\Http\Controllers\Auth\RegisterController@showRegistrationForm');
+//Route::post('register', 'App\Http\Controllers\Auth\RegisterController@register');
+
+// Password Reset Routes...
+//Route::get('password/reset/{token?}', 'App\Http\Controllers\Auth\ForgotPasswordController@showResetForm');
+//Route::post('password/email', 'App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail');
+//Route::post('password/reset', 'App\Http\Controllers\Auth\ForgotPasswordController@reset')
 
 Route::get('admin/home', [Controllers\HomeController::class, 'index'])->name('home');
 Route::get('admin/menu', [Controllers\HomeController::class, 'menu'])->name('admin.menu');

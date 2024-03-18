@@ -87,7 +87,7 @@
                                 {{-- todo:make it more display enduser friendly --}}
                                 <tbody>
                                     @foreach (\Grassstation\Models\Product::query()->orderBy("internal_sku")->get() as $product)
-                                    <tr class="table-{{$product->stockStatusClass()}}">
+                                    <tr class="table-{{$product->stockStatusClass()}}" id="prdx-{{$product->id}}">
                                         <td><a href="{{route("products.edit",$product->id)}}">{{$product->internal_sku}}</td>
                                         <td>{{$product->name}} {!! $product->dispKind(true) !!} {!! $product->feature_flag ? '<span>⭐</span>' : '' !!}</td>
                                         <td class="text-right">{{$product->price_per_gram}}</td>
@@ -98,7 +98,7 @@
 <form action="{{ route('products.toggle-stock', $product) }}" method="POST">
     @csrf
     @method('PUT')
-    <button type="submit">ปรับสถานะสินค้า</button>
+    <button type="submit" class="btn btn-{{$product->stockStatusClass()}}">ปรับสถานะสินค้า</button>
 </form></div>
                                         </td>
                                     </tr>
