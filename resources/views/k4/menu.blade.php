@@ -23,8 +23,8 @@
     </span>
 </nav>
   <div class="container-fluid">
-<div class="row">
-    <div class="col" style="position: fixed;top:0;botom:0;left:0;right:49.88%">
+<div class="row" style="position: relative">
+    <div class="col" style="position: absolute;top:0;botom:0;left:0;right:49.88%">
         <div id="gs-slideshow" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 @php
