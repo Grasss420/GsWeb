@@ -22,10 +22,10 @@
 	  Grassstation Khlong 4
     </span>
 </nav>
-  <div class="container-fluid">
-<div class="row" style="position: relative">
-    <div class="col" style="position: absolute;top:0;botom:0;left:0;right:49.88%">
-        <div id="gs-slideshow" class="carousel slide" data-ride="carousel">
+  <div class="container-fluid" style="position: relative">
+<div class="row">
+    <div class="col">
+        <div id="gs-slideshow" class="carousel slide" data-ride="carousel" style="position: absolute;top:0;botom:0;left:0;right:49.88%">
             <div class="carousel-inner" role="listbox">
                 @php
                     $pd = \Grassstation\Models\Product::qHomeP();
