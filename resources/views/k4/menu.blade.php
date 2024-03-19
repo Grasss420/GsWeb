@@ -19,8 +19,9 @@
 	  Grassstation Khlong 4
     </span>
 </nav>
-  <div class="container my-5">
+  <div class="container-fluid my-5">
 @php
+$i = 0;
 //get featured menu
 $fp = \Grassstation\Models\Product::Featured()->OrderByDesc("price_per_gram")->OrderBy("internal_sku")->get();
 $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::getU2();
