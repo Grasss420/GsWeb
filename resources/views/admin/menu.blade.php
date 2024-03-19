@@ -88,7 +88,7 @@
                                 <tbody>
                                     @foreach (\Grassstation\Models\Product::query()->orderBy("internal_sku")->get() as $product)
                                     <tr class="table-{{$product->stockStatusClass()}}" id="prdx-{{$product->id}}">
-                                        <td><a href="{{route("products.edit",$product->id)}}">{{$product->internal_sku}}</td>
+                                        <td class="productIcon"></td>
                                         <td>{{$product->name}} {!! $product->dispKind(true) !!} {!! $product->feature_flag ? '<span>⭐</span>' : "" !!}</td>
                                         <td class="text-right">{{$product->price_per_gram}}</td>
                                         <td class="commands">

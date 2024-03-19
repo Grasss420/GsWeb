@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="1800">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="//static.monolidthz.com/generic/css/HelveticaNeueLTCom_ChromeCompat.css" rel="stylesheet" />
   <title>เมนูกัญชา Grassstation สาขาคลองสี่</title>
@@ -19,7 +20,10 @@
 	  Grassstation Khlong 4
     </span>
 </nav>
-  <div class="container-fluid my-5">
+  <div class="container-fluid">
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
 @php
 $i = 0;
 //get featured menu
@@ -37,24 +41,26 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
     </thead>
     <tbody>
         @foreach ($fp as $product)
-        @include('components.elRow',['product'=>$product])
+        @include('components.elRow',['product'=>$product,'i'=>&$i])
         @endforeach
         <tr>
             <th scope="row" colspan="100%" class="text-center">สินค้าราคาไม่เกิน 200 บาท</th>
         </tr>
         
         @foreach ($u1 as $product)
-        @include('components.elRow',['product'=>$product])
+        @include('components.elRow',['product'=>$product,'i'=>&$i])
         @endforeach
         <tr>
             <th scope="row" colspan="100%" class="text-center">สินค้าราคาไม่เกิน 200 บาท</th>
         </tr>
         @foreach ($u2 as $product)
-        @include('components.elRow',['product'=>$product])
+        @include('components.elRow',['product'=>$product,'i'=>&$i])
         @endforeach
     </tbody>
 </table>
   </div>
+</div>
+</div>
     <footer class="footer">
       <div class="container">
         <span class="text-muted">Copyright&copy; 2022-2024 <a href="http://https://wiki.spkz.monolidthz.com/Grasss_Network" target="_blank" rel="noopener noreferrer">Grasss Network</a>. &nbsp; | &nbsp;</span>
@@ -66,11 +72,13 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
 			</ul>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script>
-	if (location.protocol != 'https:')
-	{
-	 location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-	}
+$(document).ready(function () {
+    $("html, body").animate({
+  scrollTop: $(document).height() - $(window).height()
+}, 1000 * 1800);
+});
 </script>
 </body>
 </html>
