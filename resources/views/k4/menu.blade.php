@@ -3,8 +3,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="refresh" content="1800">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
   <link href="//static.monolidthz.com/generic/css/HelveticaNeueLTCom_ChromeCompat.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{asset('css/win95.css')}}">
+  <link rel="stylesheet" href="{{asset('css/grassstation.css')}}?{{date("w-m")}}">
   <title>เมนูกัญชา Grassstation สาขาคลองสี่</title>
 	<style>
 		.footer { background-color: #f5f5f5; padding-top:10px;}
@@ -24,7 +26,6 @@
 <div class="row">
     <div class="col">
         <div id="gs-slideshow" class="carousel slide" data-ride="carousel">
-            <h3>สินค้าแนะนำล่าสุด</h3>
             <div class="carousel-inner" role="listbox">
                 @php
                     $pd = \Grassstation\Models\Product::qHomeP();
