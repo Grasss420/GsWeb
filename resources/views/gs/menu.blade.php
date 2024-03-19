@@ -83,6 +83,11 @@
 ⭐️ซื้อ 2 แถม 1 ทุกรายการ🥴⭐️</marquee>
 @else เมนู Grassstation @endif
                         </h1>
+                        <div>
+                            <script async src="https://cse.google.com/cse.js?cx=6643f1053948341d4">
+                            </script>
+                            <div class="gcse-search"></div>
+                        </div>
                         <form class="form-inline justify-content-between" method="POST" action="#" id="frmSearch">
                         @csrf
                         <div class="input-group mb-3">
