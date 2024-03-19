@@ -88,7 +88,7 @@
                             </script>
                             <div class="gcse-search"></div>
                         </div>
-                        <form class="form-inline justify-content-between" method="POST" action="#" id="frmSearch">
+                        <form class="form-inline justify-content-between d-none" method="POST" action="#" id="frmSearch">
                         @csrf
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
