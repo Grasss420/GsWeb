@@ -20,12 +20,11 @@
     </span>
 </nav>
   <div class="container my-5">
-	  <h1 class="text-center">Grassstation <small>Khlong 4</small></h1>
 @php
 //get featured menu
 $fp = \Grassstation\Models\Product::Featured()->OrderByDesc("price_per_gram")->OrderBy("internal_sku")->get();
 @endphp
-    <p class="text-center">Website อยู่ในระหว่างการก่อสร้าง</p>
+@dump($fp)
     
   </div>
     <footer class="footer">
