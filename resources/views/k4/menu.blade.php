@@ -25,7 +25,7 @@
   <div class="container-fluid" style="position: relative">
 <div class="row">
     <div class="col">
-        <div id="gs-slideshow" class="carousel slide" data-ride="carousel" style="position: sticky;top:0;botom:0;left:0;right:0;">
+        <div id="gs-slideshow" class="carousel slide gsK4-slideshow" data-ride="carousel" style="position: sticky;top:0;botom:0;left:0;right:0;">
             <div class="carousel-inner" role="listbox">
                 @php
                     $pd = \Grassstation\Models\Product::qHomeP();
@@ -35,7 +35,7 @@
                     
                 <div class="carousel-item{{$i ? " active" : ""}}">
                     <a href="{{$product->getURL()}}">
-                        <div title="{{$product->name}} {{$product->getKind()}} ({{$product->displayPrice(true)}})" class="img-item" oncontextmenu="return false" style="background-image:url('{{$product->firstImage()}}')">
+                        <div title="{{$product->name}} {{$product->getKind()}} ({{$product->displayPrice(true)}})" class="img-item" oncontextmenu="return false" style="background-image:url('{{$product->firstImage()}}');background-size:cover">
                             <img class="d-none" loading="lazy" src="{{$product->firstImage()}}" alt="Product Image for {{$product->name}}">&nbsp;
                         </div>
                     </a>
@@ -107,7 +107,7 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
 $(document).ready(function () {
     $("html, body").animate({
   scrollTop: $(document).height() - $(window).height()
-}, 1000 * 60 * 2);
+}, 1000 * 30);
 });
 </script>
 </body>
