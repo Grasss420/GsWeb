@@ -22,7 +22,35 @@
 </nav>
   <div class="container-fluid">
 <div class="row">
-    <div class="col"></div>
+    <div class="col">
+        <div id="gs-slideshow" class="carousel slide" data-ride="carousel">
+            <h3>สินค้าแนะนำล่าสุด</h3>
+            <div class="carousel-inner" role="listbox">
+                @php
+                    $pd = \Grassstation\Models\Product::qHomeP();
+                    $i = true;
+                @endphp
+                @foreach ($pd as $product)
+                    
+                <div class="carousel-item{{$i ? " active" : ""}}">
+                    <a href="{{$product->getURL()}}">
+                        <div title="{{$product->name}} {{$product->getKind()}} ({{$product->displayPrice(true)}})" class="img-item" oncontextmenu="return false" style="background-image:url('{{$product->firstImage()}}')">
+                            <img class="d-none" loading="lazy" src="{{$product->firstImage()}}" alt="Product Image for {{$product->name}}">&nbsp;
+                        </div>
+                    </a>
+                </div> @php $i = false; @endphp @endforeach
+            </div>
+            <a class="carousel-control-prev" href="#gs-slideshow" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#gs-slideshow" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
     <div class="col">
 @php
 $i = 0;
