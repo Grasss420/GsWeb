@@ -23,9 +23,36 @@
 @php
 //get featured menu
 $fp = \Grassstation\Models\Product::Featured()->OrderByDesc("price_per_gram")->OrderBy("internal_sku")->get();
+$u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::getU2();
 @endphp
-@dump($fp)
-    
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($fp as $product)
+        @include('components.elRow',['product'=>$product])
+        @endforeach
+        <tr>
+            <th scope="row" colspan="100%" class="text-center">สินค้าราคาไม่เกิน 200 บาท</th>
+        </tr>
+        
+        @foreach ($u1 as $product)
+        @include('components.elRow',['product'=>$product])
+        @endforeach
+        <tr>
+            <th scope="row" colspan="100%" class="text-center">สินค้าราคาไม่เกิน 200 บาท</th>
+        </tr>
+        @foreach ($u2 as $product)
+        @include('components.elRow',['product'=>$product])
+        @endforeach
+    </tbody>
+</table>
   </div>
     <footer class="footer">
       <div class="container">
