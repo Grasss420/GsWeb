@@ -25,7 +25,7 @@
 </nav>
   <div class="container-fluid" style="position: relative">
 <div class="row">
-    <div class="col" style="position: sticky;top:0;bottom:0;left:0;right:0;">
+    <div class="col" style="">
         <div id="gs-slideshow" class="carousel slide gsK4-slideshow" data-ride="carousel" style="display:block">
             <div class="carousel-inner" role="listbox">
                 @php
