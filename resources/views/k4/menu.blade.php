@@ -2,7 +2,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="60">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
   <link href="//static.monolidthz.com/generic/css/HelveticaNeueLTCom_ChromeCompat.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{asset('css/win95.css')}}">
@@ -104,12 +103,21 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
-<script>
-$(document).ready(function () {
-    window.scrollY = 0;
+<script>$(document).ready(function () {
+    // Set scroll position to 0
     $("html, body").animate({
-      scrollTop: $(document).height()
-    }, 1000 * 60);
+        scrollTop: 0
+    }, 1000, function() {
+        // Scroll to the end of the page after scrolling to the top
+        $("html, body").animate({
+            scrollTop: $(document).height()
+        }, 1000);
+    });
+
+    // Refresh the page after 1 minute
+    setTimeout(function() {
+        location.reload();
+    }, 60000);
 });
 </script>
 </body>
