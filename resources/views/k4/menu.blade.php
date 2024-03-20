@@ -105,8 +105,9 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
 <script>
 $(document).ready(function () {
-    $("html, body").animate({
-  scrollTop: $(document).height() - $(window).height()
+    $("html").animate({
+  scrollTop:0},0).animate({
+  scrollTop: $(document).height()
 }, 1000 * 60);
 });
 </script>
