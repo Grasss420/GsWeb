@@ -31,8 +31,8 @@ main{
     backdrop-filter: saturate(150%) blur(5px);
 }
 #gs-slideshow.gsK4-slideshow{
-    max-height: 90vh;
-    
+    max-height: 98vh;
+    height: 100%;
 }
 #gs-menu .menu-category{
     padding: 0;
