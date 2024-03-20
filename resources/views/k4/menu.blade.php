@@ -115,7 +115,7 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
     });
 
     // Refresh the page after 1 minute
-    setTimeout(, 60000);
+    setTimeout(location.reload, 60000);
 });
 </script>
 </body>
