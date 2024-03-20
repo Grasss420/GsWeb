@@ -11,6 +11,10 @@
 		.footer { background-color: #f5f5f5; padding-top:10px;}
 		.bg-grasss{background:#507c58;color:#d7d7d5;position: sticky !important; top: 0;left: 0;right: 0;z-index: 20;}
         #gs-slideshow{z-index: 15; position: sticky; top: 75px;left: 0;z-index: 19;padding-top:15px;}
+        #gs-slideshow .img-item{
+            max-height: 80vh;
+    min-height: 750px;
+        }
 	</style>
 </head>
 <body>
@@ -52,6 +56,11 @@
             </a>
         </div>
 
+        <div>
+            <script async src="https://cse.google.com/cse.js?cx=6643f1053948341d4">
+            </script>
+            <div class="gcse-search"></div>
+        </div>
     </div>
     <div class="col">
 @php
