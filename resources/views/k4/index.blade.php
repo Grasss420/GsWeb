@@ -12,7 +12,7 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-grasss">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="{{route('root')}}">
     <img src="https://grassstation.xyz/img/gs.png" height="40" class="d-inline-block align-top" alt="Grassstation Logo">
   </a>
     <span class="navbar-text">
