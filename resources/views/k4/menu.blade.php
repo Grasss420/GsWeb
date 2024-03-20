@@ -14,6 +14,7 @@
 	</style>
 </head>
 <body>
+    <a id="top"></a>
 <nav class="navbar navbar-dark bg-grasss">
   <a class="navbar-brand" href="{{route('root')}}">
     <img src="https://grassstation.xyz/img/gs.png" height="40" class="d-inline-block align-top" alt="Grassstation Logo">
@@ -105,6 +106,7 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
 <script>
 $(document).ready(function () {
+    window.scrollY = 0;
     $("html, body").animate({
       scrollTop: $(document).height()
     }, 1000 * 60);
