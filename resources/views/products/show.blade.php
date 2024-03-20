@@ -162,11 +162,12 @@
                                     </div>  --}}
                                 </div>
                             @auth
+                            <div class="btn-group"><a href="{{route("products.edit",$product->id)}}" class="btn btn-warning">แก้ไขข้อมูลสินค้า</a>
                             <form action="{{ route('products.toggle-stock', $product) }}" method="POST">
                                 @csrf
                                 @method('PUT')
                                 <button type="submit" class="btn btn-{{$product->stockStatusClass()}}">ปรับสถานะสินค้า</button>
-                            </form>
+                            </form></div>
                             @endauth
                             @if ($product->status === 'in stock')
                                 สถานะ: <b class="text-success" itemprop="availability" content="https://schema.org/InStock">มีสินค้า</b><br>
