@@ -10,7 +10,7 @@
 	<style>
 		.footer { background-color: #f5f5f5; padding-top:10px;}
 		.bg-grasss{background:#507c58;color:#d7d7d5;position: sticky !important; top: 0;left: 0;right: 0;z-index: 20;}
-        #gs-slideshow{z-index: 1; height: 98vh !important; position: sticky; top: 75px;left: 0;z-index: 19; background:#9bac99;}
+        #gs-slideshow{z-index: 1; height: 98vh !important; position: sticky; top: 75px;left: 0;z-index: 19;}
 	</style>
 </head>
 <body>
@@ -25,7 +25,7 @@
 </nav>
   <div class="container-fluid" style="position: relative">
 <div class="row">
-    <div class="col" style="">
+    <div class="col" style="background:#9bac99;">
         <div id="gs-slideshow" class="carousel slide gsK4-slideshow" data-ride="carousel" style="display:block">
             <div class="carousel-inner" role="listbox">
                 @php
