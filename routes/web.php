@@ -18,6 +18,7 @@ Route::domain('k4.grassstation.xyz')->group(function () {
     Route::get('/', [Controllers\Gsk4Controller::class, 'index'])->name('k4.root');
     
     Route::get("menu",[Controllers\Gsk4Controller::class, 'menu'])->name('k4.menu');
+    Route::get("products/json",[Controllers\ProductController::class, 'jsonX'])->name('k4.menu.json');
     Route::get("contact",[Controllers\Gsk4Controller::class, 'contact'])->name('k4.contact');
 });
 Route::domain('tattoo.grassstation.xyz')->group(function () {
@@ -53,7 +54,7 @@ Route::resource('article',Controllers\ArticleController::class);
 // Authentication Routes...
 Route::get('login', 'Grassstation\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Grassstation\Http\Controllers\Auth\LoginController@login');
-Route::get('logout', 'Grassstation\Http\Controllers\Auth\LoginController@logout')->name('logout');
+Route::post('logout', 'Grassstation\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
 //Route::get('register', 'App\Http\Controllers\Auth\RegisterController@showRegistrationForm');
