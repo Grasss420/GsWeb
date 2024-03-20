@@ -9,7 +9,8 @@
   <title>เมนูกัญชา Grassstation สาขาคลองสี่</title>
 	<style>
 		.footer { background-color: #f5f5f5; padding-top:10px;}
-		.bg-grasss{background:#507c58;color:#d7d7d5;position: sticky !important; top: 0;left: 0;right: 0;}
+		.bg-grasss{background:#507c58;color:#d7d7d5;position: sticky !important; top: 0;left: 0;right: 0;z-index: 20;}
+        #gs-slideshow{z-index: 1; height: 98vh !important;}
 	</style>
 </head>
 <body>
