@@ -15,6 +15,9 @@
             max-height: 80vh;
     min-height: 750px;
         }
+        #tblGrassStoX tbody tr{ 
+            background-position: center;
+        }
 	</style>
 </head>
 <body>
@@ -70,7 +73,7 @@ $fp = \Grassstation\Models\Product::Featured()->OrderByDesc("price_per_gram")->O
 $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::getU2();
 @endphp
 
-<table class="table">
+<table class="table" id="tblGrassStoX">
     <thead>
         <tr>
             <th></th>
