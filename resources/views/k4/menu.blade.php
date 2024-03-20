@@ -111,7 +111,7 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
         // Scroll to the end of the page after scrolling to the top
         $("html, body").animate({
             scrollTop: $(document).height()
-        }, 1000);
+        }, 60000);
     });
 
     // Refresh the page after 1 minute
