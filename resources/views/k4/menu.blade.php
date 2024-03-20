@@ -108,7 +108,7 @@ $(document).ready(function () {
     $("html").animate({
   scrollTop:0},0).animate({
   scrollTop: $(document).height()
-}, 1000 * 60);
+}, 1000 * 30);
 });
 </script>
 </body>
