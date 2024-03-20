@@ -237,6 +237,23 @@ class Product extends Model implements Sitemapable
             return $qr;
         });
     }
+    public static function qHomePM()
+    {
+        return Cache::remember('qHomeP', now()->addHour(), function () {
+            $pu = static::featured()->hasImage()->orderByDesc("id");
+            $qr = $pu->get();
+            if ($qr->count() < 20) {
+                // Execute the second query
+                $pu2 = static::inStock()->hasImage()->orderByDesc("id")->take(20 - $qr->count());
+                $qr2 = $pu2->get();
+                // Merge the results from both queries and remove duplicates
+                $mergedResults = $qr->merge($qr2)->unique('id');
+        
+                return $mergedResults;
+            }
+            return $qr;
+        });
+    }
 
     
     public function toSitemapTag(): Url | string | array

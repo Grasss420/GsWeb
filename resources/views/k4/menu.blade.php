@@ -28,14 +28,14 @@
         <div id="gs-slideshow" class="carousel slide gsK4-slideshow" data-ride="carousel" style="position: sticky;top:0;botom:0;left:0;right:0;">
             <div class="carousel-inner" role="listbox">
                 @php
-                    $pd = \Grassstation\Models\Product::qHomeP();
+                    $pd = \Grassstation\Models\Product::qHomePM();
                     $i = true;
                 @endphp
                 @foreach ($pd as $product)
                     
                 <div class="carousel-item{{$i ? " active" : ""}}">
                     <a href="{{$product->getURL()}}">
-                        <div title="{{$product->name}} {{$product->getKind()}} ({{$product->displayPrice(true)}})" class="img-item" oncontextmenu="return false" style="background-image:url('{{$product->firstImage()}}');background-size:cover">
+                        <div title="{{$product->name}} {{$product->getKind()}} ({{$product->displayPrice(true)}})" class="img-item" style="background-image:url('{{$product->firstImage()}}');background-size:cover">
                             <img class="d-none" loading="lazy" src="{{$product->firstImage()}}" alt="Product Image for {{$product->name}}">&nbsp;
                         </div>
                     </a>
@@ -76,13 +76,13 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
             <th scope="row" colspan="100%" class="text-center">สินค้าราคาไม่เกิน 200 บาท</th>
         </tr>
         
-        @foreach ($u1 as $product)
+        @foreach ($u2 as $product)
         @include('components.elRow',['product'=>$product,'i'=>&$i])
         @endforeach
         <tr>
-            <th scope="row" colspan="100%" class="text-center">สินค้าราคาไม่เกิน 200 บาท</th>
+            <th scope="row" colspan="100%" class="text-center">สินค้าราคาไม่เกิน 100 บาท</th>
         </tr>
-        @foreach ($u2 as $product)
+        @foreach ($u1 as $product)
         @include('components.elRow',['product'=>$product,'i'=>&$i])
         @endforeach
     </tbody>
@@ -111,13 +111,11 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
         // Scroll to the end of the page after scrolling to the top
         $("html, body").animate({
             scrollTop: $(document).height()
-        }, 60000);
+        }, 80000);
     });
 
     // Refresh the page after 1 minute
-    setTimeout(function() {
-        location.reload();
-    }, 60000);
+    setTimeout(, 60000);
 });
 </script>
 </body>
