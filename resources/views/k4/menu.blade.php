@@ -5,12 +5,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
   <link href="//static.monolidthz.com/generic/css/HelveticaNeueLTCom_ChromeCompat.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{asset('css/win95.css')}}">
-  <link rel="stylesheet" href="{{asset('css/grassstation.css')}}?{{date("w-m")}}">
+  <link rel="stylesheet" href="{{asset('css/grassstation.css')}}?a{{date("w-m")}}">
   <title>เมนูกัญชา Grassstation สาขาคลองสี่</title>
 	<style>
 		.footer { background-color: #f5f5f5; padding-top:10px;}
 		.bg-grasss{background:#507c58;color:#d7d7d5;position: sticky !important; top: 0;left: 0;right: 0;z-index: 20;}
-        #gs-slideshow{z-index: 1; height: 98vh !important; position: sticky; top: 40px;left: 0;z-index: 20;}
+        #gs-slideshow{z-index: 1; height: 98vh !important; position: sticky; top: 75px;left: 0;z-index: 20; background: }
 	</style>
 </head>
 <body>
