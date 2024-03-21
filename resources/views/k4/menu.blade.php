@@ -60,13 +60,8 @@
             </a>
         </div>
 
-        <div>
-            <script async src="https://cse.google.com/cse.js?cx=6643f1053948341d4">
-            </script>
-            <div class="gcse-search"></div>
-        </div>
     </div>
-    <div class="col">
+    <div class="col" id="cGrassStoX">
 @php
 $i = 0;
 //get featured menu
@@ -77,9 +72,13 @@ $u1 = \Grassstation\Models\Product::getU1();$u2 = \Grassstation\Models\Product::
 <table class="table" id="tblGrassStoX">
     <thead>
         <tr>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th colspan="100%" class="text-center">เมนูกัญชา Grassstation</th>
+        </tr>
+        <tr>
+            <th class="text-center">รูปสินค้า</th>
+            <th class="text-center">ชื่อสินค้า</th>
+            <th class="text-center">ชนิด</th>
+            <th class="text-center">ราคาต่อหน่วย</th>
         </tr>
     </thead>
     <tbody>

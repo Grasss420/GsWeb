@@ -14,7 +14,11 @@ use Grassstation\Http\Controllers;
 |
 */
 
-Route::domain('k4.grassstation.xyz')->group(function () {
+$g = Route::domain('k4.grassstation.xyz');
+if (app()->environment('local')) {
+    $g = Route::prefix('k4');
+}
+$g->group(function () {
     Route::get('/', [Controllers\Gsk4Controller::class, 'index'])->name('k4.root');
     
     Route::get("menu",[Controllers\Gsk4Controller::class, 'menu'])->name('k4.menu');

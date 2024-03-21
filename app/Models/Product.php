@@ -92,12 +92,27 @@ class Product extends Model implements Sitemapable
         return empty($this->kind) ? "Accessories" : ucfirst($this->kind);
     }
 
+    public function featFlagClass()
+    {
+        if(!$this->feature_flag){
+            return '';
+
+        }elseif ($this->kind=="sativa"){
+            return 'bg-s';
+        }elseif ($this->kind=="indica"){
+            return 'bg-i';
+        }elseif ($this->kind=="hybrid"){
+            return 'bg-h';
+        }else{
+            return 'bg-a';
+        }
+    }
     public function dispKind($short = false)
     {
         if ($this->kind=="sativa"){
-            return '<span class="badge badge-primary">'.($short ? 'S' : 'Sativa').'</span>';
+            return '<span class="badge badge-danger">'.($short ? 'S' : 'Sativa').'</span>';
         }elseif ($this->kind=="indica"){
-            return '<span class="badge badge-info">'.($short ? 'I' : 'Indica').'</span>';
+            return '<span class="badge badge-primary">'.($short ? 'I' : 'Indica').'</span>';
         }elseif ($this->kind=="hybrid"){
             return '<span class="badge badge-success">'.($short ? 'H' : 'Hybrid').'</span>';
         }else{

@@ -84,8 +84,40 @@ main{
 .menu-category .mc-hybrid{
     background-color: #7100aa6d;
 }
-
-.menu-category .mc-acc.active{
+.bg-s,.bg-i,.bg-h{
+    backdrop-filter: saturate(150%) blur(5px);
+}
+#cGrassStoX{
+    background-image: url('https://grassstation.xyz/img/gs.png');
+}
+.bg-s{
+    background-color: #b79c0044;
+    animation: sFlash 2s infinite alternate;
+}
+.bg-i{
+    background-color: #009fb844;
+    animation: iFlash 2s infinite alternate;
+}
+.bg-h{
+    background-color: #22941144;
+    animation: hFlash 2s infinite alternate;
+}
+@keyframes sFlash {
+    0%   { background-color: #b79c0044; } 
+    50%  { background-color: #b79c0011; } 
+    100% { background-color: #b79c0044; } 
+}
+@keyframes iFlash {
+    0%   { background-color: #009fb844; } 
+    50%  { background-color: #009fb811; } 
+    100% { background-color: #009fb844; } 
+}
+@keyframes hFlash {
+    0%   { background-color: #22941144; } 
+    50%  { background-color: #22941111; } 
+    100% { background-color: #22941144; } 
+}
+.menu-category .mc-acc.active,.bg-acc{
     background-color: #aaa;
 }
 .menu-category .mc-acc{
