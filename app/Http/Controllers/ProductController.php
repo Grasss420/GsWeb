@@ -72,7 +72,7 @@ class ProductController extends Controller
     }
     public function toggleStock(Product $product) {
         $product->toggleStockStatus();
-        return back()->with('success', 'Stock status updated successfully.');
+        return back()->with('success', 'Stock status updated successfully.'); // append #prdx-{{$product->id}}
     }
     
     /**

@@ -243,7 +243,9 @@
                         
                     </div>
                     <div class="card-footer sr-only">
-                        <a name="" class="btn btn-success btn-sm" href="#" role="button">ดูข้อมูลสินค้า</a>
+                        <a name="" class="btn btn-success btn-sm" href="{{route('k4.menu')}}" role="button">ดูข้อมูลสินค้า</a>
+                        เมนูกัญชา กัญชาปทุมธานี ราคาเริ่มต้นที 20 บาท, กัญชาคลองสี่ กัญชาลำลูกกา Grassstation, ร้านกัญชาใกล้ฉัน จังหวัดปทุมธานี<br>
+                        เมนูกัญชา Indoor, กัญชา Green Crack, กัญชา Blue Dream, กัญชาเคดี, กัญชา KD, ส่งด่วนกัญชา กัญชาส่งด่วน กัญชาส่งแกร็บ ส่งฟรีในบริเวณคลอง 1-6
                     </div>
                 </div>
             </div>

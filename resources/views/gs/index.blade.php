@@ -104,6 +104,7 @@
                     <img src="https://grassstation.xyz/storage/gsi/YvcdDKWmbrpYi3boT0tmoJAQTVnwSjlfi66LpJIk.jpg" loading="lazy" alt="Grassstation Café Welcomes Everyone over 20 years old">
                     <div class="card-body">
                         <h4 class="card-title">Operating Hours <sub>(<span class="sr-only">Operating in </span>UTC+7<span class="sr-only"> Timezone</span>)</sub></h4>
+                        {{-- todo: --}}
                         <ul class="list-unstyled">
                             <li>
                                 <strong>Shop:</strong> Open 24 hours
