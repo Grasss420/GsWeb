@@ -36,6 +36,7 @@
 			  <li class="list-inline-item"><a href="https://grassstation.xyz">สาขาหลัก</a></li>
 			  <li class="list-inline-item"><a href="https://k2.grassstation.xyz">สาขาคลองสอง</a></li>
 			  <li class="list-inline-item"><a href="https://k4.grassstation.xyz">สาขาคลองสี่</a></li>
+        <li class="list-inline-item"><a href="https://galactichigh.grassstation.xyz/">สาขารังสิต</a></li>
 			  <!--<li class="list-inline-item"><a href="https://grass.whiteglassware.net">สาขาบางกรวย</a></li>-->
 			</ul>
       </div>

@@ -18,16 +18,17 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    สาขา
+                    สาขาต่างๆ
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <!-- K4 Branch Link -->
                     <a class="dropdown-item" href="https://k4.grassstation.xyz">สาขาคลองสี่</a>
-                    <a class="dropdown-item" href="https://tattoo.grassstation.xyz">ร้านสัก Grassstation Tattoo</a>
+                    <a class="dropdown-item" href="https://galactichigh.grassstation.xyz/">สาขามหาวิทยาลัยรังสิต (Galactic High &times; Grassstation)</a>
                     <!-- Add more microsite links if needed -->
                 </div>
             </li>
             @guest
+            <li><a class="nav-link" href="https://order.grassstation.xyz/pickup" target="_blank" rel="noopener noreferrer">ฝ่ายจัดซื้อ</a></li>
                     {{-- @if (Route::has('login'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

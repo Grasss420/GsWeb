@@ -115,7 +115,7 @@
                             <li>
                                 <strong>Delivery:</strong> 6:30 AM to 2:00 AM
                             </li>
-                            <li class="">
+                            <li class="d-none">
                                 <strong>Food &amp; Café:</strong> <small><a href="https://maps.app.goo.gl/8rdpWusvmCENTMd16" target="_blank">กาแฟสด Wat Caf’e วัฒน์คาเฟ่ สาขา 146</a></small>
                             </li>
                         </ul>
