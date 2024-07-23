@@ -23,7 +23,8 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <!-- K4 Branch Link -->
                     <a class="dropdown-item" href="https://k4.grassstation.xyz">สาขาคลองสี่</a>
-                    <a class="dropdown-item" href="https://galactichigh.grassstation.xyz/">สาขามหาวิทยาลัยรังสิต (Galactic High &times; Grassstation)</a>
+                    <a class="dropdown-item" href="https://k2.grassstation.xyz">สาขาคลองสอง</a>
+                    <a class="dropdown-item" href="https://galactichigh.grassstation.xyz/">สาขามหาวิทยาลัยรังสิต<br>(Galactic High &times; Grassstation)</a>
                     <!-- Add more microsite links if needed -->
                 </div>
             </li>
