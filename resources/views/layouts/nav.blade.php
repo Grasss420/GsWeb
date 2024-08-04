@@ -29,7 +29,7 @@
                 </div>
             </li>
             @guest
-            <li><a class="nav-link" href="https://order.grassstation.xyz/pickup" target="_blank" rel="noopener noreferrer">ฝ่ายจัดซื้อ</a></li>
+            <li><a class="nav-link" href="https://order.grassstation.xyz/purchasing/" target="_blank" rel="noopener noreferrer">ฝ่ายจัดซื้อ</a></li>
                     {{-- @if (Route::has('login'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
