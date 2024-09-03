@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->enum('kind', ['sativa', 'indica', 'hybrid'])->nullable();
+            $table->enum('kind', ['sativa','sativahybrid','hybrid','indicahybrid','indica'])->nullable();
             $table->unsignedTinyInteger('grade')->default(0);
             $table->decimal('price_per_gram', 8, 2)->default(0);
             $table->enum('status', ['in stock', 'out of stock', 'hidden'])->default('in stock');

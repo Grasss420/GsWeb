@@ -109,14 +109,20 @@ class Product extends Model implements Sitemapable
     }
     public function dispKind($short = false)
     {
-        if ($this->kind=="sativa"){
-            return '<span class="badge badge-danger">'.($short ? 'S' : 'Sativa').'</span>';
-        }elseif ($this->kind=="indica"){
-            return '<span class="badge badge-primary">'.($short ? 'I' : 'Indica').'</span>';
-        }elseif ($this->kind=="hybrid"){
-            return '<span class="badge badge-success">'.($short ? 'H' : 'Hybrid').'</span>';
-        }else{
+        switch ($this->kind) {
+            case 'sativa':
+                return '<span class="badge badge-danger">'.($short ? 'S' : 'Sativa').'</span>';
+            case 'sativahybrid':
+                return '<span class="badge badge-danger">'.($short ? 'H.S' : 'H. Sativa').'</span>';
+            case 'indica':
+                return '<span class="badge badge-primary">'.($short ? 'I' : 'Indica').'</span>';
+            case 'indicahybrid':
+                return '<span class="badge badge-primary">'.($short ? 'H.I' : 'H. Indica').'</span>';
+            case 'hybrid': 
+                return '<span class="badge badge-success">'.($short ? 'H' : 'Hybrid').'</span>';
+            default:
             return'<span class="badge badge-secondary">'.($short ? 'A' : 'Accessories').'</span>';
+                break;
         }
     }
     /**

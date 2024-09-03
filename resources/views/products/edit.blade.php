@@ -51,9 +51,9 @@
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kind" id="inputKind2" value="indica" @if ($editing && $editing->kind=="indica") checked @endif>
+                                    <input class="form-check-input" type="radio" name="kind" id="inputKind2" value="sativahybrid" @if ($editing && $editing->kind=="sativahybrid") checked @endif>
                                     <label class="form-check-label" for="inputKind2">
-                                        Indica
+                                        H.Sativa
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -63,8 +63,20 @@
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kind" id="inputKind4" value=""@if ($editing && $editing->kind=="") checked @endif> 
+                                    <input class="form-check-input" type="radio" name="kind" id="inputKind4" value="indicahybrid" @if ($editing && $editing->kind=="indicahybrid") checked @endif>
                                     <label class="form-check-label" for="inputKind4">
+                                        H.Indica
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="kind" id="inputKind5" value="indica" @if ($editing && $editing->kind=="indica") checked @endif>
+                                    <label class="form-check-label" for="inputKind5">
+                                        Indica
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="kind" id="inputKind6" value=""@if ($editing && $editing->kind=="") checked @endif> 
+                                    <label class="form-check-label" for="inputKind6">
                                         Accessories
                                     </label>
                                 </div>
