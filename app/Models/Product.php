@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Cache;
 use Spatie\Sitemap\Contracts\Sitemapable;
 use Spatie\Sitemap\Tags\Url;
 
+/**
+ * @author  MoNolidThZ - SPKZ Design Co. <admin@monolidthz.com>
+ * @version 1.0.0
+ * @since 1.0.0 (Creation Time Unknown)
+ */
 class Product extends Model implements Sitemapable
 {
     use HasFactory;
@@ -96,15 +101,18 @@ class Product extends Model implements Sitemapable
     {
         if(!$this->feature_flag){
             return '';
-
-        }elseif ($this->kind=="sativa"){
-            return 'bg-s';
-        }elseif ($this->kind=="indica"){
-            return 'bg-i';
-        }elseif ($this->kind=="hybrid"){
-            return 'bg-h';
-        }else{
-            return 'bg-a';
+        }
+        switch ($this->kind) {
+            case 'sativa':
+            case 'sativahybrid':
+                return 'bg-s';
+            case 'indica':
+            case 'indicahybrid':
+                return 'bg-i';
+            case 'hybrid': 
+                return 'bg-h';
+            default:
+                return 'bg-a';
         }
     }
     public function dispKind($short = false)
