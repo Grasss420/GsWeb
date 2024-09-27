@@ -6,6 +6,7 @@ use Grassstation\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redirect;
 
@@ -46,17 +47,40 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        $p = new Product($request->input());
-        if($request->has("editing_id")){
-            $p = Product::find($request->input("editing_id"));
-            $p->fill($request->input());
-            $p->feature_flag = $request->has("feature_flag") ? 1 : 0;
+    public function store(Request $request){
+        try {
+            $p = new Product($request->input());
+
+            if ($request->has("editing_id")) {
+                $p = Product::find($request->input("editing_id"));
+                $p->fill($request->input());
+                $p->feature_flag = $request->has("feature_flag") ? 1 : 0;
+            }
+
+            // Save product to the database
+            $p->saveOrFail();
+
+            // Clear the cache for related data
+            Cache::forget('productU1');
+            Cache::forget('productU2');
+            Cache::forget('qHomeP');
+
+            // Redirect back to the edit page with a success message
+            return Redirect::route("products.edit", $p->id)->with('updated', true);
+
+        } catch (QueryException $e) {
+            // Check if the error is related to duplicate entry
+            if ($e->getCode() == '23000') {
+                // Redirect back with a custom error message
+                return Redirect::back()->withErrors(['error' => 'Duplicate SKU: The internal SKU already exists for another product. Please choose a unique SKU.'])->withInput();
+            }
+
+            // For any other database error, return a generic message
+            return Redirect::back()->withErrors(['error' => 'There was an issue saving the product. Please try again later.'.PHP_EOL.$e->getCode().PHP_EOL.$e->getMessage()])->withInput();
+        } catch (\Exception $e) {
+            // Handle general exceptions
+            return Redirect::back()->withErrors(['error' => 'An unexpected error occurred. Please try again later.'])->withInput();
         }
-        $p->saveOrFail();
-        Cache::forget('productU1');Cache::forget('productU2');Cache::forget( 'qHomeP');
-        return Redirect::route("products.edit",$p->id)->with('updated', true); 
     }
 
     /**
