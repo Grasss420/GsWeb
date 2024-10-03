@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('inventory_txns', function (Blueprint $table) {
+        Schema::create('product_inv_logs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inventory_txns');
+        Schema::dropIfExists('product_inv_logs');
     }
 };
