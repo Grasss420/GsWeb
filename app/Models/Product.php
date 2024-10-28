@@ -10,6 +10,9 @@ use Spatie\Sitemap\Contracts\Sitemapable;
 use Spatie\Sitemap\Tags\Url;
 
 /**
+ * Product to be Displayed on the Web
+ * @package Grassstation
+ * @subpackage Core
  * @author  MoNolidThZ - SPKZ Design Co. <admin@monolidthz.com>
  * @version 1.0.0
  * @since 1.0.0 (Creation Time Unknown)
@@ -214,6 +217,18 @@ class Product extends Model implements Sitemapable
         }
         return $pa;
     }
+
+    public static function ajsD(){
+        $pa = [];
+        foreach (static::all() as $product) {
+            $pa[] = $product->toArray();
+        }
+        return $pa;
+    }
+    public static function ajsHash(){
+        return hash('crc32', json_encode(static::ajsD()));
+    }
+
     public function toggleStockStatus() {
         switch ($this->status) {
             case 'in stock':
@@ -283,7 +298,6 @@ class Product extends Model implements Sitemapable
             return $qr;
         });
     }
-
     
     public function toSitemapTag(): Url | string | array
     {
