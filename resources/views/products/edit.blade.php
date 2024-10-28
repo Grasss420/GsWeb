@@ -51,55 +51,36 @@
                             <input type="text" name="internal_sku" id="inputinternal_sku" class="form-control" required @if ($editing) value="{{$editing->internal_sku}}" @endif>
                         </div>
                         <div class="form-group">
-                            
-                            <legend class="col-form-label col-sm-2 pt-0">หมวดสินค้า</legend>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kind" id="inputKind1" value="sativa" @if ($editing && $editing->kind=="sativa") checked @endif> 
-                                    <label class="form-check-label" for="inputKind1">
-                                        Sativa
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kind" id="inputKind2" value="sativahybrid" @if ($editing && $editing->kind=="sativahybrid") checked @endif>
-                                    <label class="form-check-label" for="inputKind2">
-                                        H.Sativa
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kind" id="inputKind3" value="hybrid" @if ($editing && $editing->kind=="hybrid") checked @endif>
-                                    <label class="form-check-label" for="inputKind3">
-                                        Hybrid
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kind" id="inputKind4" value="indicahybrid" @if ($editing && $editing->kind=="indicahybrid") checked @endif>
-                                    <label class="form-check-label" for="inputKind4">
-                                        H.Indica
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kind" id="inputKind5" value="indica" @if ($editing && $editing->kind=="indica") checked @endif>
-                                    <label class="form-check-label" for="inputKind5">
-                                        Indica
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="kind" id="inputKind6" value=""@if ($editing && $editing->kind=="") checked @endif> 
-                                    <label class="form-check-label" for="inputKind6">
-                                        Accessories
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="grade">สถานะสินค้า</label>
-                            <select class="form-control" name="status" id="status">
-                                <option value="in stock" @if ($editing && $editing->status=='in stock') selected @endif>มีสินค้า</option>
-                                <option value="out of stock" @if ($editing && $editing->status=='out of stock') selected @endif>สินค้าหมด</option>
-                                <option value="hidden" @if ($editing && $editing->status=="hidden") selected @endif>ซ่อน</option>
+                            <label for="kind">หมวดสินค้า</label>
+                            <select class="form-control" name="kind" id="kind">
+                                <option value="sativa" @if ($editing && $editing->kind == "sativa") selected @endif>Sativa</option>
+                                <option value="sativahybrid" @if ($editing && $editing->kind == "sativahybrid") selected @endif>H.Sativa</option>
+                                <option value="hybrid" @if ($editing && $editing->kind == "hybrid") selected @endif>Hybrid</option>
+                                <option value="indicahybrid" @if ($editing && $editing->kind == "indicahybrid") selected @endif>H.Indica</option>
+                                <option value="indica" @if ($editing && $editing->kind == "indica") selected @endif>Indica</option>
+                                <option value="" @if ($editing && $editing->kind == "") selected @endif>Accessories</option>
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <legend class="col-form-label pt-0">สถานะสินค้า</legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status" id="status1" value="in stock" @if ($editing && $editing->status == "in stock") checked @endif>
+                                <label class="form-check-label" for="status1">
+                                    มีสินค้า
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status" id="status2" value="out of stock" @if ($editing && $editing->status == "out of stock") checked @endif>
+                                <label class="form-check-label" for="status2">
+                                    สินค้าหมด
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status" id="status3" value="hidden" @if ($editing && $editing->status == "hidden") checked @endif>
+                                <label class="form-check-label" for="status3">
+                                    ซ่อน
+                                </label>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="price_per_gram">ราคา/กรัม</label>

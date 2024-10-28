@@ -76,7 +76,7 @@ class ProductController extends Controller
             }
 
             // For any other database error, return a generic message
-            return Redirect::back()->withErrors(['error' => 'There was an issue saving the product. Please try again later.'.PHP_EOL.$e->getCode().PHP_EOL.$e->getMessage()])->withInput();
+            return Redirect::back()->withErrors(['error' => 'บันทึกข้อมูลไม่สำเร็จ กรุณาตรวจสอบรหัสสินค้าหรือการซ้ำกันของข้อมูล'.PHP_EOL.$e->getCode().PHP_EOL.$e->getMessage()])->withInput();
         } catch (\Exception $e) {
             // Handle general exceptions
             return Redirect::back()->withErrors(['error' => 'An unexpected error occurred. Please try again later.'])->withInput();
@@ -96,7 +96,7 @@ class ProductController extends Controller
     }
     public function toggleStock(Product $product) {
         $product->toggleStockStatus();
-        return back()->with('success', 'Stock status updated successfully.'); // append #prdx-{{$product->id}}
+        return back()->with('success', 'Stock status updated successfully.')->withFragment('#prdx-'.$product->id); // append #prdx-{{$product->id}}
     }
     
     /**

@@ -87,7 +87,11 @@
                                 </thead>
                                 {{-- todo:make it more display enduser friendly --}}
                                 <tbody>
-                                    @foreach (\Grassstation\Models\Product::query()->orderBy("internal_sku")->get() as $product)
+                                    @foreach (\Grassstation\Models\Product::qAllP() as $cgs => $products)
+                                    <tr>
+                                        <td colspan="4">{{$cgs}}</td>
+                                    </tr>
+                                    @foreach ($products as $product)
                                     <tr class="table-{{$product->stockStatusClass()}}" id="prdx-{{$product->id}}">
                                         <td class="productIcon" style="background-image:url('{{$product->firstImage()}}');background-size:cover">{{$product->internal_sku}}</td>
                                         <td><a href="{{route("products.edit",$product->id)}}">{{$product->name}}</a> {!! $product->dispKind(true) !!} {!! $product->feature_flag ? '<span>⭐</span>' : "" !!}</td>
@@ -105,6 +109,7 @@
 </form></div>
                                         </td>
                                     </tr>
+                                    @endforeach
                                     @endforeach
                                 </tbody>
                             </table>
