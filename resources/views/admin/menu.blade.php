@@ -76,6 +76,7 @@
                     <div class="row">
                         <div class="col">
                             <table class="table">
+                                <caption>Menu Hash: {{\Grassstation\Models\Product::ajsHash()}}</caption>
                                 <thead>
                                     <tr>
                                         <th>รหัสสต๊อค</th>
