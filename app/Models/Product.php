@@ -298,6 +298,10 @@ class Product extends Model implements Sitemapable
             return $qr;
         });
     }
+
+    public static function qAllP() {
+        return static::orderBy("internal_sku")->get()->groupBy('status');
+    }
     
     public function toSitemapTag(): Url | string | array
     {
