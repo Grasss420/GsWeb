@@ -5,7 +5,7 @@
             <a href="https://sarkhan.wiki/Grassstation" class="btn start-button"><img src="{{asset('img/win95/icons/web_file-1.png')}}" class="icon-16" alt="Wiki Logo"> Wiki</a>
             <a href="https://www.facebook.com/profile.php?id=100093714811870" target="_blank" class="btn start-button">Facebook</a>
             <a href="https://twitter.com/GrassstationXYZ" target="_blank" class="btn start-button">Twitter</a>
-            <a href="https://bsky.app/profile/grassstation.xyz" target="_blank">Bluesky</a>
+            <a href="https://bsky.app/profile/grassstation.xyz" target="_blank" class="btn start-button">Bluesky</a>
             <a href="https://maps.app.goo.gl/LxfHUutsSHD1Y7xU9" target="_blank" class="btn start-button"><img src="{{asset('img/win95/icons/globe_map-4.png')}}" class="icon-16" alt="Google Maps logo"> Google Maps</a>
             <a href="https://linktr.ee/grassstation" target="_blank" class="btn start-button"><img src="{{asset('img/win95/icons/tree-1.png')}}" class="icon-16" alt="Linktree Logo"> Linktree</a>
             
