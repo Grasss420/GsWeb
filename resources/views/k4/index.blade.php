@@ -23,10 +23,10 @@
 	  <h1 class="text-center">Grassstation <small>Khlong 4</small></h1>
     <p class="text-center"><a href="{{route('k4.menu')}}">เมนูกัญชาสาขาคลองสี่</a></p>
     <p class="text-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3871.2063406924312!2d100.6870689!3d14.005776!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7f200c78b6f3%3A0x1e62576f950a0a56!2sGrassstation!5e0!3m2!1sth!2sth!4v1707335522938!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d241.95364533626173!2d100.6883712!3d14.0026911!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7f67a2ac5527%3A0x400c8a2e76b1649c!2zR3Jhc3NzdGF0aW9uIOC4o-C5ieC4suC4meC4guC4suC4ouC4geC4seC4jeC4iuC4suC4m-C4suC4geC4hOC4peC4reC4hzQgKENhbm5hYmlzIENhZsOpKQ!5e0!3m2!1sen!2sth!4v1730791714479!5m2!1sen!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	  </p>
 	  <p class="text-center">
-		  <a href="https://maps.app.goo.gl/aMcRvoxFuBJHhZVQA" target="_blank" class="btn btn-success">Google Maps</a>
+		  <a href="https://maps.app.goo.gl/LxfHUutsSHD1Y7xU9" target="_blank" class="btn btn-success">Google Maps</a>
 	  </p>
   </div>
     <footer class="footer">
