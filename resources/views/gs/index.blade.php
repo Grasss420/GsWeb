@@ -136,7 +136,7 @@
                     </div>
                     <div class="card-body">
                         <div class="google-maps">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d241.95364533626173!2d100.6883712!3d14.0026911!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7f67a2ac5527%3A0x400c8a2e76b1649c!2zR3Jhc3NzdGF0aW9uIOC4o-C5ieC4suC4meC4guC4suC4ouC4geC4seC4jeC4iuC4suC4m-C4suC4geC4hOC4peC4reC4hzQgKENhbm5hYmlzIENhZsOpKQ!5e0!3m2!1sen!2sth!4v1730791714479!5m2!1sen!2sth" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5609.204109957495!2d100.68864714001836!3d14.003772966715434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7fb8ac001a99%3A0x9641937dd3c3c263!2zR3Jhc3NzdGF0aW9uIOC4o-C5ieC4suC4meC4guC4suC4ouC4geC4seC4jeC4iuC4siDguJvguLLguIHguITguKXguK3guIc0IChDYW5uYWJpcyBTdG9yZSk!5e0!3m2!1sen!2sth!4v1731492382926!5m2!1sen!2sth" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
