@@ -88,10 +88,10 @@
                                 {{-- todo:make it more display enduser friendly --}}
                                 <tbody>
                                     @foreach (\Grassstation\Models\Product::qAllP() as $cgs => $products)
-                                    <tr>
+                                    <tr> {{-- loop 1: iterate over stock status --}}
                                         <td colspan="4">{{$cgs}}</td>
                                     </tr>
-                                    @foreach ($products as $product)
+                                    @foreach ($products as $product) {{-- loob 2: iterate over each produx --}}
                                     <tr class="table-{{$product->stockStatusClass()}}" id="prdx-{{$product->id}}">
                                         <td class="productIcon" style="background-image:url('{{$product->firstImage()}}');background-size:cover">{{$product->internal_sku}}</td>
                                         <td><a href="{{route("products.edit",$product->id)}}">{{$product->name}}</a> {!! $product->dispKind(true) !!} {!! $product->feature_flag ? '<span>⭐</span>' : "" !!}</td>

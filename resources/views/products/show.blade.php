@@ -28,6 +28,56 @@
 <link rel="canonical" href="{{url($cannonicalURL)}}">
 <link rel="icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
 <meta name ="rating" content="adult"> 
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "{{$product->name}}",
+      "description": "{!! $product->description !!}",
+      "image": "{{$product->firstImage()}}",
+      "sku": "885420{{crc32($product->internal_sku)}}",
+      "brand": {
+        "@type": "Brand",
+        "name": "Grassstation"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "{{url($cannonicalURL)}}",
+        "priceCurrency": "THB",
+        "price": "{{$product->price_per_gram}}",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "{{$product->status === 'in stock' ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'}}",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "THB",
+          "price": "{{$product->price_per_gram}}",
+          "valueAddedTaxIncluded": true
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "minValue": 15,
+            "maxValue": 80,
+            "currency": "THB"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "TH"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        }
+      }
+    }
+    </script>
 @endsection
 
 @section('content')
@@ -50,7 +100,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="card-body" itemscope itemtype="http://schema.org/Product">
+                <div class="card-body">
                     <div class="row">
                         <div class="col-md-4 col-sm-12">
                             <div id="pdSS" class="carousel slide" data-ride="carousel">
@@ -82,14 +132,14 @@
                                     @if ($product->hasImage())
                                     @foreach ($proPics as $in => $pic)
                                         <div class="carousel-item {{$in == 0 ? 'active' : ""}}">
-                                            <div class="img-item" oncontextmenu="return false" style="background-image:url('{{$pic->getURL()}}')"><img class="d-none" loading="lazy" src="{{$pic->getURL()}}" alt="Product Image #{{$in+1}}"{!!$in == 0 ? ' itemprop="image"' : ""!!}></div>
+                                            <div class="img-item" oncontextmenu="return false" style="background-image:url('{{$pic->getURL()}}')"><img class="d-none" loading="lazy" src="{{$pic->getURL()}}" alt="Product Image #{{$in+1}}"></div>
 
                                         </div>
                                     @endforeach
                                     @else
                                         
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="{{$product->firstImage()}}" alt="No Product Image" itemprop="image">
+                                        <img class="d-block w-100" src="{{$product->firstImage()}}" alt="No Product Image">
                                     </div>
                                     @endif
                                 </div>
@@ -106,61 +156,8 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <h1 itemprop="name">{{$product->name}} <small>{!! $product->dispKind() !!}</small></h1>
-                            <meta itemprop="strainType" content="{{$product->getKind()}}">
-                            <meta itemprop="strain" content="{{$product->name}}">
-                            <meta itemprop="sku" content="885420{{crc32($product->internal_sku)}}" />
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope>
-                                <meta itemprop="name" content="Grassstation" />
-
-                            </div>
-                            <div itemprop="offers">
-                            <div itemscope itemtype="https://schema.org/Offer" itemid="{{url($cannonicalURL)}}">
-                                <link itemprop="url" href="{{url($cannonicalURL)}}" />
-                                <meta itemprop="priceCurrency" content="THB" />
-                                <meta itemprop="price" content="{{$product->price_per_gram}}" />
-                                <meta itemprop="itemCondition" content="https://schema.org/NewCondition" />
-                                <div itemprop="priceSpecification" itemtype="https://schema.org/PriceSpecification" class="d-none" itemscope>{{$product->price_per_gram}} THB per gram
-                                    <meta itemprop="priceCurrency" content="THB" />
-                                </div>
+                            <h1>{{$product->name}} <small>{!! $product->dispKind() !!}</small></h1>
                             
-                                <div itemprop="shippingDetails" itemtype="https://schema.org/OfferShippingDetails" itemscope>
-                                    <meta itemprop="name" content="Standard Postal Shipping">
-                            
-                                    <!-- Standard Shipping Rate -->
-                                    <div itemprop="shippingRate" itemtype="https://schema.org/MonetaryAmount" itemscope>
-                                        <meta itemprop="minValue" content="15" />
-                                        <meta itemprop="maxValue" content="80" />
-                                        <meta itemprop="currency" content="THB" />
-                                    </div>
-                            
-                                    <!-- Standard Shipping Destination -->
-                                    <div itemprop="shippingDestination" itemtype="https://schema.org/DefinedRegion" itemscope>
-                                        <meta itemprop="addressCountry" content="TH" />
-                                    </div>
-                            
-                                    <!-- Standard Shipping Delivery Time -->
-                                    <div itemprop="deliveryTime" itemtype="https://schema.org/ShippingDeliveryTime" itemscope>
-                                        <div itemprop="transitTime" itemtype="https://schema.org/QuantitativeValue" itemscope>
-                                            <meta itemprop="minValue" content="1" />
-                                            <meta itemprop="maxValue" content="7" />
-                                            <meta itemprop="unitCode" content="DAY" />
-                                        </div>
-                                    </div>
-                            {{--
-                                    <!-- Free Shipping in Pathum Thani -->
-                                    <div itemprop="eligibleRegion" itemtype="https://schema.org/GeoShape" itemscope>
-                                        <meta itemprop="address" content="Thanyaburi District, Lum Luk Ka District, Pathum Thani, Thailand">
-                                    </div>
-                            
-                                    <!-- Free Shipping Rate -->
-                                    <div itemprop="priceSpecification" itemtype="https://schema.org/PriceSpecification" itemscope>
-                                        <meta itemprop="name" content="Free Shipping in Pathum Thani">
-                                        <span itemprop="price" content="0"></span>
-                                        <meta itemprop="priceCurrency" content="THB">
-                                        <meta itemprop="eligibleTransactionVolume" content="500.00"> <!-- Orders over 500 THB -->
-                                    </div>  --}}
-                                </div>
                             @auth
                             <div class="btn-group"><a href="{{route("products.edit",$product->id)}}" class="btn btn-warning">แก้ไขข้อมูลสินค้า</a>
                             <form action="{{ route('products.toggle-stock', $product) }}" method="POST">
@@ -170,15 +167,15 @@
                             </form></div>
                             @endauth
                             @if ($product->status === 'in stock')
-                                สถานะ: <b class="text-success" itemprop="availability" content="https://schema.org/InStock">มีสินค้า</b><br>
+                                สถานะ: <b class="text-success">มีสินค้า</b><br>
                                 {{$product->displayPrice()}}
                             @elseif($product->status === 'out of stock')
-                                สถานะ: <b class="text-danger" itemprop="availability" content="https://schema.org/OutOfStock">สินค้าหมด</b>
+                                สถานะ: <b class="text-danger">สินค้าหมด</b>
                             @endif
                             </div></div> {{-- end offer --}}
                         
                             <hr>
-                            <div itemprop="description">{!! $product->description !!}</div>
+                            <div id="product-description">{!! $product->description !!}</div>
                         </div>
                     </div>
                 

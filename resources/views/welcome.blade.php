@@ -135,7 +135,7 @@
         </span>
       </div>
       <div class="col-10 col-md gstex">
-		  <span class="d-block mb-3"><a href="https://wiki.spkz.monolidthz.com/Grassstation">Wiki</a> &nbsp;|&nbsp; &copy; Grassstation 2022-2023 &nbsp; 8/69 Khlong Si, Bueng Yitho Subdistrict, Khlong Luang District, Pathum Thani 12120 &nbsp; 🇹🇭Thailand
+		  <span class="d-block mb-3"><a href="https://sarkhan.wiki/Grassstation">Wiki</a> &nbsp;|&nbsp; &copy; Grassstation 2022-2023 &nbsp; 8/69 Khlong Si, Bueng Yitho Subdistrict, Khlong Luang District, Pathum Thani 12120 &nbsp; 🇹🇭Thailand
 			
 		  </span>
       </div>
