@@ -8,6 +8,16 @@ body.bg-gs{
     color:#212529;
     padding-bottom: 26px;
 }
+body.bg-gsflat{
+    min-height: 100%;
+    background-image: url("https://grassstation.xyz/img/gs.png");
+    background-color: #507c58;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color:#212529;
+    padding-bottom: 26px;
+}
 #gs-logo{
     margin: -15px auto;
 }
