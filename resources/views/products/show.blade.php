@@ -172,7 +172,6 @@
                             @elseif($product->status === 'out of stock')
                                 สถานะ: <b class="text-danger">สินค้าหมด</b>
                             @endif
-                            </div></div> {{-- end offer --}}
                         
                             <hr>
                             <div id="product-description">{!! $product->description !!}</div>
