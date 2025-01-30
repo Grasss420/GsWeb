@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>503 Information System Unavailable</title>
+<title>404 IO Maiyuban</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
 <link href="//static.monolidthz.com/generic/css/HelveticaNeueLTCom_ChromeCompat.css" rel="stylesheet" />
@@ -131,9 +131,9 @@ code {
     </div>
     
     <div class="text">
-        <div class="r">404 Page Not Found</div>
-        <div class="g">404 Page Not Found</div>
-        <div class="b">404 Page Not Found</div>
+        <div class="r">Service Unavailable</div>
+        <div class="g">Service Unavailable</div>
+        <div class="b">Service Unavailable</div>
     </div>
 	<!--<div id="container">
 		<p>The page you requested was not found.</p>		ส่ิ่งที่คุณกำลังตามหามันบ่ได้อยุ่ในนี้เด้อ
