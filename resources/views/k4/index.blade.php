@@ -32,7 +32,7 @@
   </div>
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">Copyright&copy; 2022-{{date('Y')}} <a href="http://https://sarkhan.wiki/Grasss_Network" target="_blank" rel="noopener noreferrer">Grasss Network</a>. &nbsp; | &nbsp;</span>
+        <span class="text-muted">Copyright&copy; 2022-{{date('Y')}} <a href="https://sarkhan.wiki/Grasss_Network" target="_blank" rel="noopener noreferrer">Grasss Network</a>. &nbsp; | &nbsp;</span>
 		  <ul class="list-inline" style="display: inline-block;">
 			  <li class="list-inline-item"><a href="https://grassstation.xyz">สาขาหลัก</a></li>
 			  <!--<li class="list-inline-item"><a href="https://k2.grassstation.xyz">สาขาคลองสอง</a></li>-->
