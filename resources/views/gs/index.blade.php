@@ -36,8 +36,8 @@
                     </div>
                     <div class="card-body">
                         <h1 style="font-size: 24pt">หน้าหลักเว็บไซต์ Grassstation</h1>
-                        <p class="lead">ร้านขายกัญชา Grassstation เป็นร้านขายกัญชาที่ตั้งอยู่ที่ปากซอยคลองสี่ มีบริการส่งสินค้าในบริเวณใกล้เคียง อ.ธัญบุรี จังหวัดปทุมธานี</p>
-                        <div id="gs-slideshow" class="carousel slide" data-ride="carousel">
+                        <p class="lead">⚠ เราให้ความสำคัญกับการปฏิบัติตามกฎหมายและข้อบังคับที่เกี่ยวข้องทั้งหมด เพื่อให้สอดคล้องกับกฎหมายว่าด้วยการโฆษณาผลิตภัณฑ์กัญชาและกัญชง เราจึงจำกัดการแสดงข้อมูลผลิตภัณฑ์บางประเภทบนเว็บไซต์นี้และระงับการเผยแพร่สื่อโฆษณาออกไป</p>
+                        {{-- <div id="gs-slideshow" class="carousel slide" data-ride="carousel">
                             <h3>สินค้าแนะนำล่าสุด</h3>
                             <div class="carousel-inner" role="listbox">
                                 @php
@@ -62,7 +62,7 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
-                        </div>
+                        </div> --}}
                         <hr>
                         <div class="container">
                             <div class="row justify-content-center">
@@ -73,9 +73,10 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <p class="text-center">
+                        <p class="text-center">ขออภัยในความไม่สะดวกที่เกิดขึ้น หากท่านมีข้อสงสัยเร่งด่วน หรือต้องการข้อมูลเพิ่มเติมเกี่ยวกับผลิตภัณฑ์ โปรดติดต่อเราโดยตรง เรายินดีให้ความช่วยเหลืออย่างเต็มที่</p>
+                        {{-- <p class="text-center">
                             <strong>รับชำระเงินด้วย:</strong> เงินสด เงินโอน สแกนจ่าย<br>
-                            <b>Payments accepted:</b> Cash, Bank Transfer, Thai QR Payment (PromptPay), Venmo, CashApp, Zelle</p>
+                            <b>Payments accepted:</b> Cash, Bank Transfer, Thai QR Payment (PromptPay), Venmo, CashApp, Zelle</p> --}}
                         <span class="sr-only">
                         ร้านขายกัญชาใกล้ฉัน,ร้านขายกัญชา,ขายกัญชา,กัญชา,ร้านขายกัญชาไกล้ฉ้น,ร้านขายกัญชา,คาเฟ่กัญชาใกล้ฉัน,คาเฟ่กัญชา กัญชาราคาถูก ซื้อกัญชา ซื้อกัญชาราคาถูก ฟาร์มกัญชา ฟาร์มกัญชาใกล้ฉัน คลับกัญชา คลับกัญชาใกล้ฉัน,Weed , cannabis store nearme ,Cannabis dispensary nearme,Cannbis dispensary , cannabis , weed , dap , oil , thc , cbd , lean ,Grassstation , ร้านขายกัญชารังสิต , ร้านขายกัญชาคลอง1 , ร้านขายกัญชาคลอง2 , ร้านขายกัญชาคลอง 3 , ร้านขายกัญชาคลอง4 ร้านขายกัญชาคลอง5 , ร้านขายกัญชาคลอง6 , ร้านขายกัญชาคลอง7 , ร้านขายกัญชานครนายก , ร้านขายกัญชาราคาถูก , ร้านขายกัญชาราคาส่ง , เนื้อ , ร้านขายเนื้อ , เนื้อราคาถูก , เนื้อราคาส่ง , ซื้อกัญชาที่ไหน , กัญชาที่ไหน , เมากัญ , เพื่อนกัญ , สหายกัญ , กัญชาออแกนิค, Co-Working Space กัญชา คลองสี่,กัญชาลำลูกกา</span>
                     </div>
@@ -89,22 +90,28 @@
                     <div class="card-body">
                         <h4 class="sr-only">ช่องทางการติดต่อ</h4>
                         <h4 class="card-title">Line@: <a href="https://line.me/R/ti/p/@884ccqbw" target="_blank">@Grassstation</a></h4>
-                        <img src="img/gsqr.png" class="img-fluid qr-block" alt="">
+                        <img src="img/gsqr.png" class="img-fluid qr-block" alt="QR Code">
                         
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-block btn-link" href="https://line.me/R/ti/p/@884ccqbw" target="_blank" role="button">สั่งสินค้าทาง Line</a>
+                        <a class="btn btn-block btn-link" href="https://line.me/R/ti/p/@884ccqbw" target="_blank" role="button">ติดต่อเราผ่าน Line</a>
+                        <hr><h4 class="card-title">Operating Hours <sub>(<span class="sr-only">Operating in </span>UTC+7<span class="sr-only"> Timezone</span>)</sub></h4>
+                        
+                        <ul class="list-unstyled">
+                            <li>
+                                <strong>Shop:</strong> Open 8:00 AM &ndash; 24:00 AM (เที่ยงคืน)
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <br>
-                <div class="card">
+                {{-- <div class="card">
                     <div class="card-header">
                         Business Hours
                     </div>
                     <img src="https://grassstation.xyz/storage/gsi/cAMq2hAArfmIRLugS6PcaMFNuPzixMjebZWVmLN0.jpg" loading="lazy" alt="Grassstation Café Welcomes Everyone over 20 years old">
                     <div class="card-body">
                         <h4 class="card-title">Operating Hours <sub>(<span class="sr-only">Operating in </span>UTC+7<span class="sr-only"> Timezone</span>)</sub></h4>
-                        {{-- todo: Food Menu (canceled) --}}
+                        
                         <ul class="list-unstyled">
                             <li>
                                 <strong>Shop:</strong> Open 24 hours
@@ -119,11 +126,11 @@
                                 <strong>Food &amp; Café:</strong> <small><a href="https://maps.app.goo.gl/8rdpWusvmCENTMd16" target="_blank">กาแฟสด Wat Caf’e วัฒน์คาเฟ่ สาขา 146</a></small>
                             </li>
                         </ul>
-                    </div>
-                    <div class="card-footer">
+                    </div> --}}
+                    {{-- <div class="card-footer">
                         <sub>* Free Wi-Fi Available at Café With any Purchase</sub>
-                    </div>
-                </div>
+                    </div> 
+                </div>--}}
                 
             </div>
         </div>
@@ -136,7 +143,7 @@
                     </div>
                     <div class="card-body">
                         <div class="google-maps">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5609.204109957495!2d100.68864714001836!3d14.003772966715434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7fb8ac001a99%3A0x9641937dd3c3c263!2zR3Jhc3NzdGF0aW9uIOC4o-C5ieC4suC4meC4guC4suC4ouC4geC4seC4jeC4iuC4siDguJvguLLguIHguITguKXguK3guIc0IChDYW5uYWJpcyBTdG9yZSk!5e0!3m2!1sen!2sth!4v1731492382926!5m2!1sen!2sth" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d968.1892969645776!2d100.6881947695446!3d14.017708900318395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7f561c973403%3A0x45b82de71f304876!2zR3JlZW5MYW5kIOC4o-C5ieC4suC4meC4guC4suC4ouC4geC4seC4jeC4iuC4siDguJXguKXguLLguJTguYDguKHguLfguK3guIfguYPguKvguKHguYjguITguKXguK3guIc0IC0gQ2FubmFiaXMgc3RvcmU!5e0!3m2!1sen!2sth!4v1740332783175!5m2!1sen!2sth" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -157,6 +164,6 @@
                     </div>
                 </div>
             </div>
-          </div>
+        </div>
     </div>    
 @endsection

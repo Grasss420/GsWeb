@@ -6,11 +6,11 @@
             <a href="https://www.facebook.com/profile.php?id=100093714811870" target="_blank" class="btn start-button">Facebook</a>
             <a href="https://twitter.com/GrassstationXYZ" target="_blank" class="btn start-button">𝕏 Twitter</a>
             <a href="https://bsky.app/profile/grassstation.xyz" target="_blank" class="btn start-button">🦋 Bluesky</a>
-            <a href="https://maps.app.goo.gl/wHvbtacVQwYiP1ES8" target="_blank" class="btn start-button"><img src="{{asset('img/win95/icons/globe_map-4.png')}}" class="icon-16" alt="Google Maps logo"> Google Maps</a>
+            <a href="https://maps.app.goo.gl/VMZdpyWP9qEvKKQM7" target="_blank" class="btn start-button"><img src="{{asset('img/win95/icons/globe_map-4.png')}}" class="icon-16" alt="Google Maps logo"> GreenLand</a>
             <a href="https://linktr.ee/grassstation" target="_blank" class="btn start-button"><img src="{{asset('img/win95/icons/tree-1.png')}}" class="icon-16" alt="Linktree Logo"> Linktree</a>
             
         </div>
-        <div class="col-7 time d-none d-sm-block"><span class="sr-only">Grassstation is a Thailand Ministry Of Public Health  Registered Cannabis Dispensary Located at </span>8/69 Bueng Yitho Subdistrict, Khlong Luang District, Pathum Thani 12130, Khlong Luang District, Pathum Thani 12120 &nbsp; 🇹🇭 Thailand</div>
+        <div class="col-7 time d-none d-sm-block"><span class="sr-only">Grassstation is a Thailand Ministry Of Public Health  Registered Cannabis Dispensary</span>🇹🇭 Thailand</div>
     </div>
   
 </footer>
